@@ -1,5 +1,3 @@
-var bodyParser = require('body-parser');
-
 // basic setup
 const app = require('express')();
 app.use(bodyParser.json());
@@ -14,10 +12,10 @@ app.get("/square", (req, res) => {
         res.status(200);
         res.send({ result: square });
 
+    } else {
+        res.status(400);
+        res.send({ result: -1 });
     }
-    res.status(400);
-    res.send({ result: -1 });
-
 });
 
 function string_square(s) {
