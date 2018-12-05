@@ -1,0 +1,1 @@
+web: node string_square.js
