@@ -5,7 +5,9 @@
   "main": "string_square.js",
   "dependencies": {
     "express": "^4.16.4",
-    "jest": "^23.6.0"
+    "fetch": "^1.1.0",
+    "jest": "^23.6.0",
+    "node-fetch": "^2.3.0"
   },
   "devDependencies": {},
   "scripts": {

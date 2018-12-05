@@ -24,12 +24,11 @@ app.get("/square", (req, res) => {
     }
 });
 
-var port = process.env.PORT || 3000;
-app.listen(port, () => console.log("server running on port " + port));
-
-
 function string_square(s) {
     let square;
     square = s.length * s.length;
     return square;
 }
+
+var port = process.env.PORT || 3000;
+app.listen(port, () => console.log("server running on port " + port));
