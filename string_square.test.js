@@ -7,28 +7,34 @@ test("GET request", async () => {
         result: 0
     }));
 
-    let response = await fetch('http://localhost:3000/square?string=aaa');
-    let data = await response.json();
+    response = await fetch('http://localhost:3000/square?string=aaa');
+    data = await response.json();
     expect(JSON.stringify(data)).toEqual(JSON.stringify({
         result: 9
     }));
 
-    let response = await fetch('http://localhost:3000/square?string=0');
-    let data = await response.json();
+    response = await fetch('http://localhost:3000/square?string=0');
+    data = await response.json();
     expect(JSON.stringify(data)).toEqual(JSON.stringify({
         result: 1
     }));
 
-    let response = await fetch('http://localhost:3000/square?');
-    let data = await response.json();
+    response = await fetch('http://localhost:3000/square?');
+    data = await response.json();
     expect(JSON.stringify(data)).toEqual(JSON.stringify({
         result: -1
     }));
 
-    let response = await fetch('http://localhost:3000/round?string=aaa');
-    let data = await response.json();
+    response = await fetch('http://localhost:3000/square?string=0&ciao=no');
+    data = await response.json();
     expect(JSON.stringify(data)).toEqual(JSON.stringify({
-        result: -1
+        result: 1
+    }));
+
+    response = await fetch('http://localhost:3000/square?result=1&string=0');
+    data = await response.json();
+    expect(JSON.stringify(data)).toEqual(JSON.stringify({
+        result: 1
     }));
 });
 

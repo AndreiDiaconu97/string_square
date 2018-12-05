@@ -7,21 +7,17 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.get("/square", (req, res) => {
-    if (Object.keys(req.query).length === 1) {
-        let s = req.query.string;
+    let s = req.query.string;
 
-        if (typeof s === 'string' || s instanceof String) {
-            let square = string_square(s);
-            res.status(200);
-            res.send({ result: square });
-        } else {
-            res.status(400);
-            res.send({ result: -1 });
-        }
-    } else {
+    if (typeof s === 'string' || s instanceof String) {
+        let square = string_square(s);
         res.status(200);
-        res.end();
+        res.send({ result: square });
+
     }
+    res.status(400);
+    res.send({ result: -1 });
+
 });
 
 function string_square(s) {
