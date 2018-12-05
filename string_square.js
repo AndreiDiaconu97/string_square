@@ -1,8 +1,5 @@
 // basic setup
 const app = require('express')();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
 
 app.get("/square", (req, res) => {
     let s = req.query.string;
