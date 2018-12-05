@@ -1,0 +1,25 @@
+{
+  "name": "string_square",
+  "version": "1.0.0",
+  "description": "Exam simulation",
+  "main": "string_square.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "jest": "^23.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node string_square.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreiDiaconu97/string_square.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndreiDiaconu97/string_square/issues"
+  },
+  "homepage": "https://github.com/AndreiDiaconu97/string_square#readme"
+}
