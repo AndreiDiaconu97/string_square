@@ -1,1 +1,1 @@
-web: node string_square.js
+web: node src/server.js

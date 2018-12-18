@@ -4,21 +4,27 @@
   "description": "Exam simulation",
   "main": "string_square.js",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "fetch": "^1.1.0",
-    "jest": "^23.6.0",
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.2.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "supertest": "^3.3.0"
+  },
   "scripts": {
-    "start": "node string_square.js",
+    "start": "node src/server.js",
     "test": "jest"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AndreiDiaconu97/string_square.git"
   },
-  "author": "",
+  "author": "Andrei Diaconu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AndreiDiaconu97/string_square/issues"
